@@ -86,7 +86,8 @@ const App = () => {
     <div className="app">
       <h1>Lambda Eats</h1>
       <nav className="nav-links">
-        <Link to="/">Home</Link>
+        <Link to="/">Home</Link> 
+        
         <Link to="pizza" id="order-pizza">
           Order
         </Link>

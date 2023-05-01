@@ -37,6 +37,7 @@ function Order(props) {
             onChange={onChange}
             type="text"
             name="name"
+            data-cy="form-inputs-name" 
             id="name-input"
             placeholder="Enter Name"
             value={name}
@@ -61,15 +62,17 @@ function Order(props) {
           </select>
           <p style={{ color: "red" }}>{errors.size}</p>
         </div>
+
         <div className="toppings">
           <h3>Add Toppings</h3>
-          <p>Choose up to 3</p>
+          {/* <p>Choose up to 3</p> */}
           <label htmlFor="pepperoni">Pepperoni</label>
           <input
             onChange={onChange}
             checked={topping1}
             type="checkbox"
             name="topping1"
+            data-cy="form-check-toppings1"
             value="pepperoni"
             id="pepperoni"
           />
@@ -79,6 +82,7 @@ function Order(props) {
             checked={topping2}
             type="checkbox"
             name="topping2"
+            data-cy="form-check-toppings2"
             value="bacon"
             id="bacon"
           />
@@ -88,6 +92,7 @@ function Order(props) {
             checked={topping3}
             type="checkbox"
             name="topping3"
+            data-cy="form-check-toppings3"
             value="sausage"
             id="sausage"
           />
@@ -97,6 +102,7 @@ function Order(props) {
             checked={topping4}
             type="checkbox"
             name="topping4"
+            data-cy="form-check-toppings4"
             value="chicken"
             id="chicken"
           />
@@ -106,6 +112,7 @@ function Order(props) {
             checked={topping5}
             type="checkbox"
             name="topping5"
+            data-cy="form-check-toppings5"
             value="pineapple"
             id="pineapple"
           />
@@ -115,6 +122,7 @@ function Order(props) {
             checked={topping6}
             type="checkbox"
             name="topping6"
+            data-cy="form-check-toppings6"
             value="peppers"
             id="peppers"
           />
@@ -124,6 +132,7 @@ function Order(props) {
             checked={topping7}
             type="checkbox"
             name="topping7"
+            data-cy="form-check-toppings7"
             value="mushroom"
             id="mushroom"
             />
@@ -142,7 +151,8 @@ function Order(props) {
           ></input>
           <p>May increase price(will call to verify)</p>
         </div>
-        <button disabled={disabled} id="order-button">
+        {/* disabled={disabled} */}
+        <button  data-cy="submit" id="order-button">
           Place Order
         </button>
       </form>
